@@ -13,7 +13,9 @@ categories = ["wasm", "cryptography"]
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-silica-contract-sdk = { git = "https://github.com/Silica-Contracts/sdk" }
+# Use path during development, switch to git after SDK is pushed
+silica-contract-sdk = { path = "../_sdk" }
+# silica-contract-sdk = { git = "https://github.com/Silica-Contracts/sdk" }
 serde = { version = "1.0", default-features = false, features = ["derive", "alloc"] }
 postcard = { version = "1.0", default-features = false, features = ["alloc"] }
 blake3 = { version = "1.5", default-features = false }
